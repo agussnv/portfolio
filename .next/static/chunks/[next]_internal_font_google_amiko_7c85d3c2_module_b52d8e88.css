@@ -1,0 +1,101 @@
+/* [next]/internal/font/google/amiko_7c85d3c2.module.css [app-client] (css) */
+@font-face {
+  font-family: Amiko;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../media/WwkQxPq1DFK04uqjeV_uMogIaNM-s.f8c587b6.woff2") format("woff2");
+  unicode-range: U+900-97F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+
+@font-face {
+  font-family: Amiko;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../media/WwkQxPq1DFK04uqseV_uMogIaNM-s.39779cd1.woff2") format("woff2");
+  unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: Amiko;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../media/WwkQxPq1DFK04uqieV_uMogI-s.p.ae814d0a.woff2") format("woff2");
+  unicode-range: U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: Amiko;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../media/WwkdxPq1DFK04uJ9XUrCEIUiUto45NY-s.13eebde5.woff2") format("woff2");
+  unicode-range: U+900-97F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+
+@font-face {
+  font-family: Amiko;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../media/WwkdxPq1DFK04uJ9XUrNEIUiUto45NY-s.faa4deca.woff2") format("woff2");
+  unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: Amiko;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../media/WwkdxPq1DFK04uJ9XUrDEIUiUto4-s.p.b6bdb252.woff2") format("woff2");
+  unicode-range: U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: Amiko;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../media/WwkdxPq1DFK04uIZXErCEIUiUto45NY-s.a28f9425.woff2") format("woff2");
+  unicode-range: U+900-97F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+
+@font-face {
+  font-family: Amiko;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../media/WwkdxPq1DFK04uIZXErNEIUiUto45NY-s.69ec8839.woff2") format("woff2");
+  unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: Amiko;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../media/WwkdxPq1DFK04uIZXErDEIUiUto4-s.p.a91bb281.woff2") format("woff2");
+  unicode-range: U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: Amiko Fallback;
+  src: local(Arial);
+  ascent-override: 82.74%;
+  descent-override: 36.2%;
+  line-gap-override: 0.0%;
+  size-adjust: 112.16%;
+}
+
+.amiko_7c85d3c2-module___U4IBG__className {
+  font-family: Amiko, Amiko Fallback;
+  font-style: normal;
+}
+
+.amiko_7c85d3c2-module___U4IBG__variable {
+  --font-amiko: "Amiko", "Amiko Fallback";
+}
+
+/*# sourceMappingURL=%5Bnext%5D_internal_font_google_amiko_7c85d3c2_module_b52d8e88.css.map*/
