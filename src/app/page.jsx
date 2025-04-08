@@ -1,6 +1,8 @@
 'use client'
 
 import MainLayout from "@/app/MainLayout";
+import { CenterCarrouselComp } from "@/components/CenterCarrouselComp";
+
 
 export default function Home() {
   return (

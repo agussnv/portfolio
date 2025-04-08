@@ -21,7 +21,7 @@ export default function Experiencia() {
                     </div>
                     {experiencia.map((exp, index) => {
                         return (
-                            <div className="mt-2 relative h-[125px]">
+                            <div key={index} className="mt-2 relative h-[125px]">
                                 <div className="border w-[70px] h-[70px] rounded-full absolute left-[-35px] bg-white flex justify-center items-center whitespace-pre-line ">
                                     <p className="whitespace-pre-line">{exp.year}</p>
                                 </div>

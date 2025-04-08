@@ -3,11 +3,11 @@
 import MainLayout from "@/app/MainLayout";
 import { proyectos } from "@/data/proyectos";
 import { useParams, useRouter } from "next/navigation";
+import { CenterCarrouselComp } from "@/components/CenterCarrouselComp";
 
 export default function Proyecto() {
     const router = useRouter();
     const params = useParams();
-    console.log("PARAMETRO: ", params.proyecto);
     const proyecto = proyectos.find(proyecto => proyecto.link === `proyectos/${params.proyecto}`);
     if (!proyecto) {
         return (
@@ -22,12 +22,14 @@ export default function Proyecto() {
             <div className="w-full border-b-[2px] border-[#3D3D3D] flex items-center relative justify-center py-2">
                 <p className="font-bold text-[20px]">{proyecto.title}</p>
                 <svg onClick={() => { router.push('/proyectos') }} width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute right-[15px] cursor-pointer hover:scale-110 transition-all">
-                    <line x1="1.29289" y1="22.5062" x2="22.5061" y2="1.29295" stroke="#3D3D3D" stroke-width="2" />
-                    <line x1="1.70711" y1="1.29289" x2="22.9203" y2="22.5061" stroke="#3D3D3D" stroke-width="2" />
+                    <line x1="1.29289" y1="22.5062" x2="22.5061" y2="1.29295" stroke="#3D3D3D" strokeWidth="2" />
+                    <line x1="1.70711" y1="1.29289" x2="22.9203" y2="22.5061" stroke="#3D3D3D" strokeWidth="2" />
                 </svg>
             </div>
             <div>
-                <div className="h-[245px] border"></div>
+                <div className="h-[285px] mt-5">
+                    <CenterCarrouselComp />
+                </div>
                 <div className="flex flex-col gap-4 p-4">
                     <div>
                         <p className="font-bold text-[18px]">Descripción</p>
