@@ -16,6 +16,7 @@ const media = [
     '/media/captura3.png',
 ]
 
+
 export function CenterCarrouselComp() {
     return (
         <Swiper
