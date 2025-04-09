@@ -7,18 +7,6 @@ const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
 
 export function VideoPlayerComp(props) {
 
-    // const [isReady, setIsReady] = useState(false)
-
-    // useEffect(() => {
-    //     const timeout = setTimeout(() => {
-    //       setIsReady(true)
-    //     }, 500) // o menos, solo aseguramos que esté montado en cliente
-    
-    //     return () => clearTimeout(timeout)
-    //   }, [])
-
-    // if (!isReady) return <div>Cargando...</div>
-
     return (
         <ReactPlayer
             url={props.url}
@@ -28,6 +16,7 @@ export function VideoPlayerComp(props) {
             muted={true}
             playing={true}
             loop={true}
+            loading="lazy"
         />
     )
 }

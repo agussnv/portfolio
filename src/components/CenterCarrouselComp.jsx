@@ -5,19 +5,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
-import ReactPlayer from 'react-player';
 import { VideoPlayerComp } from '@/components/VideoPlayerComp'
 
-const media = [
-    '/media/HolaBarri-MVP.mp4',
-    '/media/captura.png',
-    '/media/captura1.png',
-    '/media/captura2.png',
-    '/media/captura3.png',
-]
-
-
-export function CenterCarrouselComp() {
+export function CenterCarrouselComp(props) {
     return (
         <Swiper
             effect={'cards'}
@@ -25,14 +15,14 @@ export function CenterCarrouselComp() {
             modules={[EffectCards]}
             className="mySwiper h-[285px] w-[500px]"
         >
-            {media.map((map, index) => {
+            {props.proyecto.map((media, index) => {
                 return (
                     <SwiperSlide key={index} className="rounded-xl">
-                        {map.includes('.mp4') ? (
-                            <VideoPlayerComp url={map} />
+                        {media.includes('.mp4') ? (
+                            <VideoPlayerComp url={media} />
                         ) : (
                             <img
-                                src={map}
+                                src={media}
                                 alt={`media-${index}`}
                                 className="w-full h-full object-cover"
                             />

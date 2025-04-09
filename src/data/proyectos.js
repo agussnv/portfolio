@@ -3,8 +3,8 @@ export const proyectos = [
         title: "HolaBarri",
         short_description: "Plataforma digital para impulsar el comercio local, integra mapas interactivos y permite a los usuarios explorar productos y tiendas cercanas.",
         large_description: "Marketplace local creado para dinamizar el comercio de barrio, permitiendo a los vecinos descubrir productos y tiendas cercanas en un entorno digital moderno y accesible. Lideré el proyecto desde la concepción hasta su presentación ante asociaciones reales y ayuntamientos, validando la propuesta con actores del entorno.\n\nLa plataforma permite a cada comercio gestionar su catálogo, recibir valoraciones y conectar directamente con la comunidad, todo sin necesidad de reparto a domicilio en la primera versión, para facilitar una prueba piloto viable.",
-        link: "proyectos/holabarri",
-        image: "https://example.com/image.jpg",
+        link: "proyecto/holabarri",
+        image: "/media/holabarri/portada.png",
         languages: [
             { 'name': 'Nuxt.JS', 'color': '#80ecc1' },
             { 'name': 'Laravel', 'color': '#f99780' },
@@ -28,8 +28,8 @@ export const proyectos = [
         title: "ATURAPP",
         short_description: "Aplicación en tiempo real para alertar casos de bullying, con un mapa de calor para visualizar incidentes y un sistema de ubicación adaptado a entornos cerrados.",
         large_description: "Plataforma contra el bullying diseñada para entornos escolares, su principal objetivo es proporcionar una herramienta discreta y efectiva que permita a los alumnos reportar incidentes de manera inmediata, además de ofrecer un canal para comunicar casos recurrentes o de acoso psicológico a través de un chat en tiempo real.\n\nLa aplicación ofrece un mapa interactivo y gráficos que muestran datos tangibles (como zonas más afectadas, horarios y días con mayor incidencia), facilitando la toma de decisiones.\n\nLideré el proyecto desde la validación de la idea hasta su implementación, adaptando la solución a las restricciones del entorno y garantizando la efectividad de las alertas en tiempo real.",
-        link: "proyectos/aturapp",
-        image: "https://example.com/image.jpg",
+        link: "proyecto/aturapp",
+        image: "/media/aturapp/portada.png",
         languages: [
             { 'name': 'Vue.JS', 'color': '#79cea9' },
             { 'name': 'Laravel', 'color': '#f99780' },
@@ -52,8 +52,8 @@ export const proyectos = [
         title: "Cinetix",
         short_description: "Portal para la compra de entradas y gestión de salas de cine, con selección de asientos en tiempo real, horarios, información de peliculas y administración de funciones.",
         large_description: "Cinetix es un proyecto personal desarrollado con Next.js, cuyo objetivo fue consolidar mis conocimientos en esta tecnología.\n\nSe trata de un portal de gestión de salas de un cine que permite a los usuarios seleccionar asientos en tiempo real, consultar horarios y acceder a información detallada de películas.",
-        link: "proyectos/cinetix",
-        image: "https://example.com/image.jpg",
+        link: "proyecto/cinetix",
+        image: "/media/cinetix/portada.png",
         languages: [
             { 'name': 'Next.JS', 'color': '#7f7f7f' },
             { 'name': 'Laravel', 'color': '#f99780' },

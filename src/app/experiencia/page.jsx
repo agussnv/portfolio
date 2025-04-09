@@ -2,8 +2,11 @@
 
 import MainLayout from "@/app/MainLayout";
 import { experiencia } from "@/data/experiencia";
+import { useContact } from "@/context/ContactContext";
 
 export default function Experiencia() {
+    const { setContactView } = useContact();
+
     return (
         <MainLayout>
             <div className="p-5 h-full">
@@ -16,7 +19,8 @@ export default function Experiencia() {
                         <div className="ml-15">
                             <p className="text-[20px] font-semibold">En búsqueda de nuevas oportunidades</p>
                             <p className="text-[16px] font-light">¿Tienes un proyecto en mente o buscas talento para tu equipo? ¡Contáctame!</p>
-                            <div className="px-3 py-[6px] border rounded-md inline-block flex items-center justify-center mt-2 font-semibold hover:bg-[#3d3d3d] hover:text-white transition-all cursor-pointer">Contactar</div>
+                            <div className="px-3 py-[6px] border rounded-md inline-block flex items-center justify-center mt-2 font-semibold hover:bg-[#3d3d3d] hover:text-white transition-all cursor-pointer"
+                                onClick={() => {setContactView(true)}}>Contactar</div>
                         </div>
                     </div>
                     {experiencia.map((exp, index) => {
