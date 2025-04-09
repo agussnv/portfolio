@@ -8,6 +8,7 @@ import { EffectCards } from 'swiper/modules';
 import ReactPlayer from 'react-player';
 import { VideoPlayerComp } from '@/components/VideoPlayerComp'
 
+
 const media = [
     '/media/HolaBarri-MVP.mp4',
     '/media/captura.png',
