@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.png" />
       </head>
       <body
-        className={`${amiko.variable} antialiased w-full flex justify-center`}
+        className={`${amiko.variable} antialiased w-full flex justify-center bg-white`}
       >
         <ContactProvider>
           {children}
