@@ -1,0 +1,9 @@
+{
+  "/favicon.ico/route": "/favicon.ico",
+  "/_not-found/page": "/_not-found",
+  "/competencias/page": "/competencias",
+  "/estudios/page": "/estudios",
+  "/experiencia/page": "/experiencia",
+  "/page": "/",
+  "/proyecto/[proyecto]/page": "/proyecto/[proyecto]"
+}
