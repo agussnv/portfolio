@@ -4,6 +4,7 @@ import MainLayout from "@/app/MainLayout";
 import ProyectoComp from "@/components/ProyectoComp";
 import { proyectos } from "@/data/proyectos";
 
+
 export default function Proyectos() {
     return (
         <MainLayout>

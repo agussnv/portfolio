@@ -9,7 +9,7 @@ export default function ProyectoComp(props) {
         <>
             <div className="border-[2px] border-md flex rounded-[10px] overflow-hidden h-[170px] hover:scale-102 transition-all">
                 <div className="w-3/10 bg-gray-200 border-r-[2px]">
-                    <img src={props.image} alt={props.title} className="w-full h-full object-cover" />
+                    <img src={props.image} alt={props.title} loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div className="w-7/10 relative py-2 px-3 ">
                     <div className="flex justify-between items-center py-1 mb-1">

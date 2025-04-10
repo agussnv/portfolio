@@ -55,7 +55,7 @@ const ContactForm = ({ setContactView }) => {
             onClick={() => { setContactView(false) }}
         >
             <motion.div
-                className="bg-white border-[2px] border-[#3D3D3D] rounded-xl w-[600px] shadow-[-5px_5px_0px_0px_rgba(61,61,61,1)]"
+                className="bg-white border-[2px] border-[#3D3D3D] rounded-xl w-[350px] sm:w-[600px] shadow-[-5px_5px_0px_0px_rgba(61,61,61,1)]"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 exit={{
@@ -66,7 +66,7 @@ const ContactForm = ({ setContactView }) => {
                 onClick={(e) => { e.stopPropagation() }}
             >
                 <div className="w-full border-b-[2px] border-[#3D3D3D] flex items-center relative justify-center py-2">
-                    <p className="font-bold text-[20px] mt-1">FORMULARIO DE CONTACTO</p>
+                    <p className="font-bold text-[16px] mt-1">FORMULARIO DE CONTACTO</p>
                     <svg onClick={() => { setContactView(false) }} width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute right-[15px] cursor-pointer hover:scale-110 transition-all">
                         <line x1="1.29289" y1="22.5062" x2="22.5061" y2="1.29295" stroke="#3D3D3D" strokeWidth="2" />
                         <line x1="1.70711" y1="1.29289" x2="22.9203" y2="22.5061" stroke="#3D3D3D" strokeWidth="2" />
@@ -74,38 +74,38 @@ const ContactForm = ({ setContactView }) => {
                 </div>
 
                 {!mailSendView ? (
-                    <div className="py-8 px-10">
-                        <h2 className="text-[35px] font-bold mb-4 text-center">¡Trabajemos juntos!</h2>
+                    <div className="py-4 px-6">
+                        <h2 className="text-[25px] font-bold mb-4 text-center">¡Trabajemos juntos!</h2>
                         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
                             <div className="flex flex-col">
-                                <label className="text-[22px]">Nombre</label>
+                                <label className="text-[18px]">Nombre</label>
                                 <input
                                     type="text"
                                     name="name"
                                     required
-                                    className="border border-gray-300 rounded px-4 py-2 text-[20px]"
+                                    className="border border-gray-300 rounded px-2 py-1 text-[16px] focus:border-black focus:outline-none"
                                     value={formData.name}
                                     onChange={handleChange}
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <label className="text-[22px]">Correo electrónico</label>
+                                <label className="text-[18px]">Correo electrónico</label>
                                 <input
                                     type="email"
                                     name="email"
                                     required
-                                    className="border border-gray-300 rounded px-4 py-2 text-[20px]"
+                                    className="border border-gray-300 rounded px-2 py-1 text-[16px] focus:border-black focus:outline-none"
                                     value={formData.email}
                                     onChange={handleChange}
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <label className="text-[22px]">Mensaje</label>
+                                <label className="text-[18px]">Mensaje</label>
                                 <textarea
                                     rows="4"
                                     name="message"
                                     required
-                                    className="border border-gray-300 rounded px-4 py-2 resize-none text-[20px]"
+                                    className="border border-gray-300 rounded px-2 py-1 resize-none text-[16px] focus:border-black focus:outline-none"
                                     value={formData.message}
                                     onChange={handleChange}
                                 />
@@ -113,11 +113,11 @@ const ContactForm = ({ setContactView }) => {
                             <div className="flex justify-center w-full h-[50px] mt-2">
                                 <button
                                     type="submit"
-                                    className="bg-[#3D3D3D] text-center rounded-md w-xs flex justify-center items-center text-white text-[25px] font-bold py-2 rounded hover:bg-[#2a2a2a] hover:scale-102 transition-all cursor-pointer"
+                                    className="bg-[#3D3D3D] text-center rounded-md w-xs flex justify-center items-center text-white text-[20px] font-bold py-2 rounded hover:bg-[#2a2a2a] hover:scale-102 transition-all cursor-pointer"
                                     disabled={isLoading}
                                 >
                                     {isLoading ? (
-                                        <Loader2 className="w-7 h-7 animate-spin" />
+                                        <Loader2 className="w-6 h-6 animate-spin" />
                                     ) : (
                                         <span>CONTACTAR</span>
                                     )}
@@ -127,8 +127,8 @@ const ContactForm = ({ setContactView }) => {
                         </form>
                     </div>
                 ) : (
-                    <div className="py-8 px-10">
-                        <h2 className="text-[35px] font-bold mb-4 text-center">¡Gracias por contactarme!</h2>
+                    <div className="py-4 px-4">
+                        <h2 className="text-[30px] font-bold mb-2 text-center">¡Gracias por contactarme!</h2>
                         <p className="text-center text-[20px]">He recibido tu mensaje,<br />pronto me pondré en contacto.</p>
                     </div>
                 )}

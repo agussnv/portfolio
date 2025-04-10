@@ -70,8 +70,8 @@ export default function Proyecto() {
                 </svg>
             </div>
             <div>
-                <div className="h-[285px] mt-5">
-                    <CenterCarrouselComp proyecto={media} />
+                <div className="h-[285px] mt-5 w-full flex justify-center items-center">
+                    <CenterCarrouselComp width="500px" height="285px"  proyecto={media} />
                 </div>
                 <div className="flex flex-col gap-4 p-4">
                     <div>

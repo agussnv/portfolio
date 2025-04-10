@@ -16,8 +16,8 @@ export default function Competencias() {
                             {competencias.slice(0, 4).map((competencia, index) => {
                                 return (
                                     <div key={index} className="flex flex-col gap-1 mb-3">
-                                        <p className="text-xl text-[16px]">{competencia.name}</p>
-                                        <NivelSkillComp nivel={competencia.nivel} />
+                                        <p className="text-[16px]">{competencia.name}</p>
+                                        <NivelSkillComp width="17px" height="17px" nivel={competencia.nivel} />
                                     </div>
                                 )
                             })
@@ -27,8 +27,8 @@ export default function Competencias() {
                             {competencias.slice(4, 8).map((competencia, index) => {
                                 return (
                                     <div key={index} className="flex flex-col gap-2 mb-3">
-                                        <p className="text-xl text-[16px]">{competencia.name}</p>
-                                        <NivelSkillComp nivel={competencia.nivel} />
+                                        <p className="text-[16px]">{competencia.name}</p>
+                                        <NivelSkillComp width="17px" height="17px" nivel={competencia.nivel} />
                                     </div>
                                 )
                             })
@@ -36,7 +36,7 @@ export default function Competencias() {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="flex justify-center">
                     <RadarSkillComp />
                 </div>
             </div>
