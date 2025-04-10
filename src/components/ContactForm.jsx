@@ -1,8 +1,9 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com'
+import { Loader2 } from 'lucide-react';
 
 const ContactForm = ({ setContactView }) => {
     const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ const ContactForm = ({ setContactView }) => {
     });
 
     const [mailSendView, setMailSendView] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         setMailSendView(false);
@@ -19,7 +21,6 @@ const ContactForm = ({ setContactView }) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        console.log(`Campo: ${name}, Valor: ${value}`);  // Añadir esta línea para depurar
         setFormData({
             ...formData,
             [name]: value
@@ -28,6 +29,7 @@ const ContactForm = ({ setContactView }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true);
 
         try {
             const result = await emailjs.send(
@@ -80,6 +82,7 @@ const ContactForm = ({ setContactView }) => {
                                 <input
                                     type="text"
                                     name="name"
+                                    required
                                     className="border border-gray-300 rounded px-4 py-2 text-[20px]"
                                     value={formData.name}
                                     onChange={handleChange}
@@ -90,6 +93,7 @@ const ContactForm = ({ setContactView }) => {
                                 <input
                                     type="email"
                                     name="email"
+                                    required
                                     className="border border-gray-300 rounded px-4 py-2 text-[20px]"
                                     value={formData.email}
                                     onChange={handleChange}
@@ -100,6 +104,7 @@ const ContactForm = ({ setContactView }) => {
                                 <textarea
                                     rows="4"
                                     name="message"
+                                    required
                                     className="border border-gray-300 rounded px-4 py-2 resize-none text-[20px]"
                                     value={formData.message}
                                     onChange={handleChange}
@@ -108,10 +113,16 @@ const ContactForm = ({ setContactView }) => {
                             <div className="flex justify-center w-full h-[50px] mt-2">
                                 <button
                                     type="submit"
-                                    className="bg-[#3D3D3D] text-center rounded-md w-xs text-white text-[25px] font-bold py-2 rounded hover:bg-[#2a2a2a] hover:scale-102 transition-all cursor-pointer"
+                                    className="bg-[#3D3D3D] text-center rounded-md w-xs flex justify-center items-center text-white text-[25px] font-bold py-2 rounded hover:bg-[#2a2a2a] hover:scale-102 transition-all cursor-pointer"
+                                    disabled={isLoading}
                                 >
-                                    CONTACTAR
+                                    {isLoading ? (
+                                        <Loader2 className="w-7 h-7 animate-spin" />
+                                    ) : (
+                                        <span>CONTACTAR</span>
+                                    )}
                                 </button>
+                                
                             </div>
                         </form>
                     </div>

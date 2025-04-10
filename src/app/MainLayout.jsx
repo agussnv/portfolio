@@ -1,13 +1,15 @@
 'use client'
 
 import { Amiko } from "next/font/google";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { AnimatePresence, motion } from 'framer-motion';
 import ContactForm from '@/components/ContactForm';
 import { useContact } from "@/context/ContactContext";
+import { Loader2 } from 'lucide-react';
 import Image from 'next/image';
 import "./globals.css";
+import BtnComponent from "@/components/BtnComponent";
 
 const amiko = Amiko({
     subsets: ['latin'],
@@ -18,6 +20,7 @@ const amiko = Amiko({
 
 export default function MainLayout({ children }) {
     const { contactView, setContactView, setMailSendView } = useContact();
+    const [isLoading, setIsLoading] = useState(false);
 
     const router = useRouter();
     const pathname = usePathname();
@@ -72,9 +75,13 @@ export default function MainLayout({ children }) {
                                 </p>
                                 <div className="flex flex-col gap-3 mt-8">
                                     {secciones.map((seccion, index) => (
-                                        <div key={index} onClick={() => { router.push(seccion.link) }} className={`cursor-pointer w-full h-[50px] border-[2px] rounded-md flex justify-center items-center font-bold text-[18px] transition-all ${seccion.active ? 'bg-[#3D3D3D] text-[#fff]' : 'bg-[#FFF] hover:bg-[#3D3D3D] hover:text-[#fff]'}`}>
+                                        <BtnComponent key={index}
+                                            onClick={()=>{
+                                                router.push(seccion.link)
+                                            }}
+                                            className={`cursor-pointer w-full h-[50px] border-[2px] rounded-md flex justify-center items-center font-bold text-[18px] transition-all ${seccion.active ? 'bg-[#3D3D3D] text-[#fff]' : 'bg-[#FFF] hover:bg-[#3D3D3D] hover:text-[#fff]'}`}>
                                             {seccion.label}
-                                        </div>
+                                        </BtnComponent>
                                     ))}
                                 </div>
                             </div>
