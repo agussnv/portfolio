@@ -4,12 +4,11 @@ import { Amiko } from "next/font/google";
 import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { AnimatePresence, motion } from 'framer-motion';
-import ContactForm from '@/components/ContactForm';
 import { useContact } from "@/context/ContactContext";
-import { Loader2 } from 'lucide-react';
+import BtnComponent from "@/components/BtnComponent";
+import ContactForm from '@/components/ContactForm';
 import Image from 'next/image';
 import "./globals.css";
-import BtnComponent from "@/components/BtnComponent";
 
 const amiko = Amiko({
     subsets: ['latin'],
@@ -20,13 +19,12 @@ const amiko = Amiko({
 
 export default function MainLayout({ children }) {
     const { contactView, setContactView, setMailSendView } = useContact();
-    const [isLoading, setIsLoading] = useState(false);
 
     const router = useRouter();
     const pathname = usePathname();
 
     const secciones = [
-        { label: 'PROYECTOS', active: pathname === '/' || pathname.includes('/proyecto'), link: '/    ' },
+        { label: 'PROYECTOS', active: pathname === '/' || pathname.includes('/proyecto'), link: '/' },
         { label: 'COMPETENCIAS', active: pathname.includes('/competencias'), link: '/competencias' },
         { label: 'EXPERIENCIA', active: pathname.includes('/experiencia'), link: '/experiencia' },
         { label: 'ESTUDIOS', active: pathname.includes('/estudios'), link: '/estudios' },

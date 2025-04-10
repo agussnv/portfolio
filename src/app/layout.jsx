@@ -1,5 +1,6 @@
 import { Amiko } from "next/font/google";
 import { ContactProvider } from "@/context/ContactContext";
+
 import "./globals.css";
 
 const amiko = Amiko({
@@ -17,6 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body
         className={`${amiko.variable} antialiased w-full flex justify-center`}
       >
